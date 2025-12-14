@@ -72,17 +72,64 @@
 }
 
 .about-photo {
-    height: 100%;
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
+  height: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  position: relative; 
 }
 
-.about-photo img {
-  width: 100%;
-  max-width: 280px;
-  border-radius: 50%;
+.rocker-and-denis {
+  position: relative; 
+  width: 280px; 
+  height: 280px;
+}
+
+/* Rocket atrás */
+.rocket {
+  width: 180%;
+  height: 180%;
   object-fit: cover;
+  border-radius: 16px;
+  position: absolute;
+  top: -35%;
+  left: 0;
+  z-index: 1;
+
+  animation: float-rocket 4s ease-in-out infinite alternate;
+}
+
+/* Denis na frente */
+.denis {
+  width: 170px;  /* menor que o container para efeito “janela” */
+  height: 170px;
+  border-radius: 50%; /* círculo */
+  object-fit: cover;
+  position: absolute;
+  top: 48%;        /* centraliza vertical */
+  left: 50.5%;       /* centraliza horizontal */
+  transform: translate(-50%, -50%); /* centralização precisa */
+  z-index: 2;      /* acima do rocket */
+  border: 3px solid rgb(80, 40, 120); /* opcional: destaque tipo moldura */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* efeito de profundidade */
+
+  animation: float-denis 4s ease-in-out infinite alternate;
+}
+
+@keyframes float-rocket {
+  0% { transform: translateY(0) rotate(-2deg); }
+  25% { transform: translateY(-10px) rotate(1deg); }
+  50% { transform: translateY(-15px) rotate(-1deg); }
+  75% { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes float-denis {
+  0% { transform: translate(-50%, -50%) translateY(0); }
+  25% { transform: translate(-50%, -50%) translateY(-5px); }
+  50% { transform: translate(-50%, -50%) translateY(-10px); }
+  75% { transform: translate(-50%, -50%) translateY(-5px); }
+  100% { transform: translate(-50%, -50%) translateY(0); }
 }
 
 .tech-grid {
@@ -94,8 +141,8 @@
 
 .tech-box {
   border-radius: 12px;
-  border: 1px solid #502878; 
-  background: rgba(220, 180, 240, 0.15);
+  border: 1px solid #211331; 
+  background: rgba(32, 21, 51, 0.322);
 }
 
 .icons-title {
@@ -103,7 +150,7 @@
     text-align: center;
     margin-bottom: 0.5rem;
     font-weight: 700;
-    color: #502878; 
+    color: #ffffff; 
 }
 
 .icons {
@@ -153,32 +200,47 @@
 }
 
 .project-card {
-  border: 1px solid #ddd;
+  border: 1px solid #9d83d1;
   padding: 1.25rem;
   border-radius: 12px;
-  background: rgba(220, 180, 240, 0.25);
+  background: rgb(47, 33, 66);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: whitesmoke;
+    cursor: default; 
 }
 
-/* hover opcional */
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
+.project-card h4 {
+    font-weight: 800;
+    font-size: larger;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.6rem;
   margin-top: 0.5rem;
 }
 
 .tags span {
-  background: #eee;
+  background-color: rgba(155, 89, 182, 0.3); 
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
   font-size: 0.75rem;
-  background-color: #cda1f0;
+  color: white; 
+  text-shadow: 0 0 1px rgba(255,255,255,0.6); 
+  box-shadow: 0 0 3px rgba(155, 89, 182, 0.6); 
+  backdrop-filter: blur(4px); 
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.tags span:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 3px rgba(155, 89, 182, 0.8);
 }
 
 /* ##### Projects Section ##### */
