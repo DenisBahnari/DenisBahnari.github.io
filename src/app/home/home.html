@@ -12,12 +12,13 @@
     <div class="about-container">
         <div class="about-left">
             <div class="about-text">
-                <h2>
-                    <span class="highlight">Hey there!</span>
+                <h2 class="typing-container">
+                    <span class="typing-text">{{ displayedText }}</span>
+                    <span class="cursor">|</span>
                 </h2>
                 <div class="about-text-content">
                         <p>
-                            My name is Denis Bahnari, I'm 21 years old from Portugal! Currently graduated with a bachelor's degree in software engineering, I started to learn programming at 15y and am very passionate in the tech field, with particular interests in Cybersecurity, AI, and Distributed Systems. 
+                            My name is <a href="https://github.com/DenisBahnari" target="_blank" class="name-link" > Denis Bahnari </a>, I'm 21 years old from Portugal 🇵🇹! Currently graduated with a bachelor's degree in software engineering, I started to learn programming at 15y and am very passionate in the tech field, with particular interests in Cybersecurity, AI, and Distributed Systems. 
                         <br>
                             Throughout my journey, I've worked on personal and academic projects that allowed me to explore secure software development, system architecture, and backend technologies. I'm especially motivated by problems that require critical thinking and a strong engineering mindset.
                         <br>
@@ -36,6 +37,7 @@
                         <img src="backend/kotlin.png" alt="Kotlin" title="Kotlin">
                         <img src="backend/c.png" alt="C" title="C">
                         <img src="backend/python.png" alt="Python" title="Python">
+                        <img src="backend/rust.png" alt="Python" title="Rust">
                     </div>
                 </div>
                 <div class="tech-box">
@@ -47,7 +49,6 @@
                         <img src="frontend/css.png" alt="CSS" title="CSS">
                         <img src="frontend/javascript.png" alt="JavaScript" title="JavaScript">
                         <img src="frontend/typescript.png" alt="TypeScript" title="TypeScript">
-                        <img src="frontend/angular.png" alt="Angular" title="Angular">
                     </div>
                 </div>
                 <div class="tech-box">
@@ -55,10 +56,20 @@
                         <h3>Tools</h3>    
                     </div>
                     <div class="icons">
-                        <img src="database/postgresql.png" alt="PostgreSQL" title="PostgreSQL">
-                        <img src="database/mongodb.png" alt="MongoDB" title="MongoDB">
+                        <img src="tools/postgresql.png" alt="PostgreSQL" title="PostgreSQL">
+                        <img src="tools/mongodb.png" alt="MongoDB" title="MongoDB">
                         <img src="tools/docker.png" alt="Docker" title="Docker">
                         <img src="tools/mqtt.png" alt="MQTT" title="MQTT">
+                    </div>
+                </div>
+                <div class="tech-box">
+                    <div class="icons-title">
+                        <h3>Frameworks</h3>
+                    </div>
+                    <div class="icons">
+                        <img src="framework/angular.png" alt="Angular" title="Angular">
+                        <img src="framework/springboot.png" alt="Spring Boot" title="Spring Boot">
+                        <img src="framework/hibernate.png" alt="Hibernate" title="Hibernate">
                     </div>
                 </div>
             </div>
@@ -66,15 +77,15 @@
         
         <div class="about-photo">
             <div class="rocker-and-denis">
-                <img src="rocket.png" class="rocket">
-                <img src="denis.png" class="denis" alt="Denis Bahnari"/>
+                <img src="denis_rocket.png" class="rocket">
             </div>
         </div>
     </div>
 </section>
 
 <!--Projects-->
-<section id="projects" class="section projects">
+<section id="projects" class="section projects" #projectsSection>
+
     <div class="project-container-title">
         <span class="highlight">My Projects</span>
     </div>
@@ -83,15 +94,7 @@
         <div class="project-grid">
             <div class="project-card">
                 <h4>BTC Blockchain</h4>
-                <p>Developed my own Bitcoin blockchain in Java</p>
-                <div class="tags">
-                    <span>Java</span>
-                    <span>Cryptography</span>
-                </div>
-            </div>
-            <div class="project-card">
-                <h4>BTC Blockchain</h4>
-                <p>BTC copy of blockchain</p>
+                <p>Developed my own Bitcoin blockchain in Rust</p>
                 <div class="tags">
                     <span>Java</span>
                     <span>Cryptography</span>
@@ -103,7 +106,7 @@
         <div class="project-grid">
             <div class="project-card">
                 <h4>Smart IoT Plantform</h4>
-                <p>Real-time device monitoring platform.</p>
+                <p>Real-time device monitoring platform for electric vehicle charging infrastructures </p>
                 <div class="tags">
                     <span>Python</span>
                     <span>MQTT</span>
@@ -113,55 +116,71 @@
                 </div>
             </div>
             <div class="project-card">
-                <h4>Smart IoT Plantform</h4>
-                <p>Real-time device monitoring platform.</p>
+                <h4>SoccerNow</h4>
+                <p>A full-stack aplication to manage soccer matches and tournaments with spring boot framework</p>
                 <div class="tags">
-                    <span>Python</span>
-                    <span>MQTT</span>
-                    <span>AI/ML</span>
+                    <span>Java</span>
+                    <span>PostgreSQL</span>
+                    <span>Hibernate</span>
+                    <span>Spring Boot</span>
+                    <span>JavaFX</span>
                     <span>Docker</span>
-                    <span>NodeRed</span>
                 </div>
             </div>
             <div class="project-card">
-                <h4>Smart IoT Plantform</h4>
-                <p>Real-time device monitoring platform.</p>
+                <h4>SC Project</h4>
+                <p>A client-server storage system with high security guarantees </p>
                 <div class="tags">
-                    <span>Python</span>
-                    <span>MQTT</span>
-                    <span>AI/ML</span>
-                    <span>Docker</span>
-                    <span>NodeRed</span>
+                    <span>Java</span>
+                    <span>TLS/SSL</span>
+                    <span>Cryptography</span>
+                    <span>Hashing</span>
+                    <span>Certificates</span>
                 </div>
             </div>
             <div class="project-card">
-                <h4>Smart IoT Plantform</h4>
-                <p>Real-time device monitoring platform.</p>
+                <h4>Distributed Secure DB</h4>
+                <p>A fully distributed data base with advanced security protocols </p>
                 <div class="tags">
-                    <span>Python</span>
-                    <span>MQTT</span>
-                    <span>AI/ML</span>
-                    <span>Docker</span>
-                    <span>NodeRed</span>
+                    <span>Java</span>
+                    <span>TLS/SSL</span>
+                    <span>Cryptography</span>
+                    <span>Shamir Sharing</span>
+                    <span>SSE Searching</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h4>PSI Taxicab</h4>
+                <p>A full-stack application to manage taxis, workers and trips with angular framework </p>
+                <div class="tags">
+                    <span>TypeScript</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>MongoDB</span>
+                    <span>Angular</span>
+                    <span>Node.js</span>
                 </div>
             </div>
         </div>
     </div>
-
 </section>
 
 <!--CONTACT-->
 <section id="contact" class="section contact">
-    <div class="contact-content">
-        <h2>Contact</h2>
-        <p>Email: denis@email.com</p>
+  <div class="contact-card">
+    <h2 class="contact-title">Get in touch</h2>
 
-        <div class="socials">
-            <a href="https://github.com/DenisBahnari" target="_blank">GitHub</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        </div>
+    <p class="contact-email">
+      <a href="mailto:denisbahnari042@gmail.com">denisbahnari042@gmail.com</a>
+    </p>
+
+    <div class="socials">
+      <a href="https://github.com/DenisBahnari" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/denis-bahnari-4b1199303/" target="_blank">LinkedIn</a>
     </div>
+  </div>
 </section>
+
 
 <footer>
     © 2025 Denis Bahnari
