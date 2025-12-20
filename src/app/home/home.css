@@ -31,6 +31,25 @@
   backdrop-filter: blur(4px); 
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
+
+.header a:hover {
+  transform:  scale(1.05); /* levanta e dá leve zoom */
+  box-shadow: 0 4px 15px rgba(120, 60, 180, 0.6); /* glow roxo */
+}
+
+.header a:hover {
+  background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(180,120,255,0.4), rgba(255,255,255,0.2));
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+
+
 /* ##### Header #####*/
 
 
@@ -148,7 +167,7 @@
   border-radius: 16px;
   position: absolute;
   top: -35%;
-  left: 0;
+  left: 20%;
   animation: float-rocket 4s ease-in-out infinite alternate;
 }
 
