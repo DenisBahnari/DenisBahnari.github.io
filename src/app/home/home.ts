@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   texts: string[] = [
     'Hey there!',
     'Software Engineer',
+    'Master\'s student',
     'Blockchain Enthusiast'
   ];
 
